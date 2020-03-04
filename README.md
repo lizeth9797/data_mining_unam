@@ -1,2 +1,1 @@
-# data_mining_unam
-Data Mining subject
+# Prácticas de la materia MINERIA DE DATOS
