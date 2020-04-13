@@ -4210,65 +4210,7 @@ df_sample.groupby(["duracion", "valor"]).agg({'clase':np.mean,'paginas':np.max})
 ```python
 %matplotlib inline
 import matplotlib.pyplot as plt
-
-df_sample['valor'] = df_sample['valor'].astype('int64')
-
-df_sample.plot(kind='scatter',x='valor',y='paginas')
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    ValueError                                Traceback (most recent call last)
-
-    <ipython-input-72-309c75b0f2ed> in <module>
-          4 df_sample['valor'] = df_sample['valor'].astype('int64')
-          5 
-    ----> 6 df_sample.plot(kind='scatter',x='valor',y='paginas')
-    
-
-    ~/anaconda3/lib/python3.7/site-packages/pandas/plotting/_core.py in __call__(self, x, y, kind, ax, subplots, sharex, sharey, layout, figsize, use_index, title, grid, legend, style, logx, logy, loglog, xticks, yticks, xlim, ylim, rot, fontsize, colormap, table, yerr, xerr, secondary_y, sort_columns, **kwds)
-       2940                           fontsize=fontsize, colormap=colormap, table=table,
-       2941                           yerr=yerr, xerr=xerr, secondary_y=secondary_y,
-    -> 2942                           sort_columns=sort_columns, **kwds)
-       2943     __call__.__doc__ = plot_frame.__doc__
-       2944 
-
-
-    ~/anaconda3/lib/python3.7/site-packages/pandas/plotting/_core.py in plot_frame(data, x, y, kind, ax, subplots, sharex, sharey, layout, figsize, use_index, title, grid, legend, style, logx, logy, loglog, xticks, yticks, xlim, ylim, rot, fontsize, colormap, table, yerr, xerr, secondary_y, sort_columns, **kwds)
-       1971                  yerr=yerr, xerr=xerr,
-       1972                  secondary_y=secondary_y, sort_columns=sort_columns,
-    -> 1973                  **kwds)
-       1974 
-       1975 
-
-
-    ~/anaconda3/lib/python3.7/site-packages/pandas/plotting/_core.py in _plot(data, x, y, subplots, ax, kind, **kwds)
-       1738         if isinstance(data, ABCDataFrame):
-       1739             plot_obj = klass(data, x=x, y=y, subplots=subplots, ax=ax,
-    -> 1740                              kind=kind, **kwds)
-       1741         else:
-       1742             raise ValueError("plot kind %r can only be used for data frames"
-
-
-    ~/anaconda3/lib/python3.7/site-packages/pandas/plotting/_core.py in __init__(self, data, x, y, s, c, **kwargs)
-        858             # the handling of this argument later
-        859             s = 20
-    --> 860         super(ScatterPlot, self).__init__(data, x, y, s=s, **kwargs)
-        861         if is_integer(c) and not self.data.columns.holds_integer():
-        862             c = self.data.columns[c]
-
-
-    ~/anaconda3/lib/python3.7/site-packages/pandas/plotting/_core.py in __init__(self, data, x, y, **kwargs)
-        804             raise ValueError(self._kind + ' requires x column to be numeric')
-        805         if len(self.data[y]._get_numeric_data()) == 0:
-    --> 806             raise ValueError(self._kind + ' requires y column to be numeric')
-        807 
-        808         self.x = x
-
-
-    ValueError: scatter requires y column to be numeric
-
 
 
 ```python
