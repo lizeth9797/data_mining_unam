@@ -6,9 +6,7 @@
 
 ####    [Práctica con documento 1](https://github.com/lizeth9797/data_mining_unam/blob/master/Practica1/Practica1.md)
 
+####    [Práctica con documento 1](https://github.com/lizeth9797/data_mining_unam/blob/master/Practica1/Practica1_2.md)
 
+####    [Práctica con documento 1](https://github.com/lizeth9797/data_mining_unam/blob/master/Practica1/Practica1_3.md)
 
-#### Práctica con documento 2:
-
-
-#### Práctica con documento 3:
