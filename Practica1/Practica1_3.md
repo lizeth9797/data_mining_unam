@@ -1,5 +1,4 @@
 
-## Karina Ortiz Muñoz- Practica 1
 
 
 ```python
